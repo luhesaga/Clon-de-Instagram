@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 25% 40% 35%;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    height: 54px;
+    background-color: rgba(var(--d87,255,255,255),1);
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    position: fixed;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    justify-self: right;
+}
+
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.text-input {
+    background-color: #FAFAFA;
+    color: gray;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.1);
+    height: 25px;
+    width: 180px;
+    text-align: center;
+    background-image: url(https://www.clipartmax.com/png/middle/16-163647_instagram-search-icon-gray.png);
+    background-repeat: no-repeat;
+    background-size: 15px;  
+    background-position: 25%;  
+}
+
+.buttons {
+    justify-self: left;
+}
+
+.sesion {
+    background: #0095f6;
+    color: white;
+    height: 30px;
+    width: 100px;
+    border-radius: 6px;
+    border: none;
+}
+
+.register {
+    background: white;
+    color: #0095f6;
+    height: 30px;
+    width: 100px;
+    border-radius: 6px;
+    border: none;
+}
+
+.profile {
+    padding-top: 100px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 200px 450px;
+    margin-bottom: 50px;
+    align-content: center;
+}
+.profile-photo {
+    justify-items: center;
+}
+.profile-photo img {
+    border-radius: 50%;
+    border: 1px solid darkgray;
+}
+
+.profile-info {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 50px);
+}
+
+.profile-info p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.profile-name {
+    grid-column: 1 / 2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    align-self: center;
+}
+
+.profile-btn {
+    grid-column: 2 / -1;
+    background: #0095f6;
+    color: white;
+    height: 30px;
+    width: 80px;
+    align-self: center;
+    justify-self: start;
+    border-radius: 6px;
+}
+.profile-desc {
+    grid-column: 1 / -1 ;
+}
+
+.profile-desc p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.division {
+    width: 60%;
+    border-top: 1px solid darkgray;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.division a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    margin-right: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+.division a span {
+    font-size: 1em;
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+    justify-content: center;
+    gap: 28px;
+}
+.post {
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+.post-figure {
+    margin: 0;
+}
+.post-figure img {
+    width: 100%;
+    vertical-align: top;
+}
+.post-overlay {
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.post:hover .post-overlay {
+    display: flex;
+}
+.post-likes, 
+.post-comments {
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+    .post-list {
+        gap: 3px;
+    }
+}
